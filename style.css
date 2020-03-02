@@ -405,6 +405,7 @@ td {
     z-index: 200;
     padding: 2em;
     display: flex;
+    overflow-y: auto;
 }
 
 #recette .description {
@@ -422,8 +423,8 @@ td {
 
 #recette img {
     display: block;
+    height: calc(40wh * 2/3);
     width: 40vw;
-    height: calc(40vw * 2/3);
 }
 
 .elem {
