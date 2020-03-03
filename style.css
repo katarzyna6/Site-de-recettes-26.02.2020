@@ -405,16 +405,30 @@ td {
     z-index: 200;
     padding: 2em;
     display: flex;
-    overflow-y: auto;
+    flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 #recette .description {
     padding: 0 2em;
+    width : 60%;
+    order: 1;
+}
+
+#recette .description h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+#recette .description p {
+    font-size: 1.5em;
+    font-style: italic;
+    color: rgb(138, 223, 245);
 }
 
 #recette .description table {
     padding: 0 2em;
-    margin: 2em 0;
+    margin: 2em 0 0;
 }
 
 .description table td, .description table th {
@@ -423,10 +437,88 @@ td {
 
 #recette img {
     display: block;
-    height: calc(40wh * 2/3);
-    width: 40vw;
+    position: absolute;
+    right: 2em;
+    width: 40%;
+    height: 60vh;
+    border-radius: 50%;
+    order: 2;
+}
+
+#recette .contenu {
+    display: flex;
+    flex-wrap: nowrap;
+    width : 92%;
+    position: absolute;
+    padding: 0 2em;
+    top: 50%;
+    order: 3;
+    background-color: rgba(48, 47, 47, 0.7);
+}
+
+.ul li, .ol li {
+    margin: 1em;
+    color: white;
+    font-size: 1em;
+}
+
+#recette .ul {
+    width : 30%;
+}
+
+#recette .ul ul {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+#recette .ol {
+    width : 70%;
 }
 
 .elem {
     cursor: pointer;
 }
+
+#gestion {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#formAjout .field {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+#formAjout .row {
+    display: flex;
+}
+
+#formAjout .row .field {
+    width: 25%;
+    margin-right: 2em;
+}
+
+#formAjout .row .field:last-child {
+    flex-direction: row;
+}
+
+#formAjout input[type=text], #formAjout select, #formAjout input[type=number] {
+    height: 40px;
+    width: 100%;
+}
+
+#formAjout input[type=submit] {
+    height: 40px;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: rgb(31, 176, 212);
+    border: none;
+}
+
+
+
+
+
